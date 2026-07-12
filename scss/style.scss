@@ -1,0 +1,128 @@
+
+
+.boton{ 
+    gap: 0px;
+    display: grid;
+    grid-template-columns: repeat(5, 21%);
+    grid-template-rows: 3fr;
+    padding-top: 28px;
+    
+    padding-left: 12%;
+    column-gap: 1%;
+    
+    row-gap: 5%;
+    align-items: center;
+
+    div{
+        
+        button{
+        cursor: url("../img/cursor.png"), auto;
+         width: 100%;
+         height: 150px;
+        border: transparent;
+    
+        transform: scale(1.1);
+        
+    }
+  }
+   
+}
+header{
+    align-items: center;
+    cursor: url("../img/cursor.png"), auto;
+    
+}
+.boton-derecha{
+    grid-column: 5;
+    grid-row: 1 / 4;
+    text-align: right;
+    button{
+        transform: scale(1);
+        padding-top: 0px;
+        position: absolute;
+        right: -95%;
+        top:180px;
+        cursor: url("../img/cursor.png"), auto;
+        background-color: rgb(222,222,222);
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../img/next-default.png");
+        background-repeat: no-repeat;
+        transition: 0.3s;
+        background-position: 40px 50px;
+        
+        img{
+            display: block;
+            margin: auto;
+            
+        } 
+    }
+}
+html{
+    
+        body{
+    cursor: url("../img/cursor.png"), auto;
+    background-color: rgb(222,222,222);
+     
+    
+}
+    
+}
+// canales y sus respectivos fondos y animaciones
+
+  .channel-1, .channel-2, .channel-3, .channel-4, .channel-5, .channel-6, .channel-7, .channel-8, .channel-9, .channel-10, .channel-11, .channel-12{
+    overflow: hidden;
+     background-color: transparent;
+     background-image: url("../img/channel-border.png") ;
+     background-size: 92%;
+     background-position: center;
+     background-repeat: no-repeat;
+     transition: 0.4s;
+
+     &:hover{
+        background-image: url("../img/channel-border-selection.png");
+    background-size: 94%;
+     }
+ 
+  }
+
+  .menu{
+    background-color: transparent;
+    border: none;
+    cursor: url("../img/cursor.png"), auto;
+    
+
+  }
+  .mail{
+    background-color: transparent;
+    border: none;
+    cursor: url("../img/cursor.png"), auto;
+  }
+  main{
+    cursor: url("../img/cursor.png"), auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 45px;
+    button{
+        transform: scale(0.5);
+    }
+  }
+ 
+  .channel-2, .channel-3, .channel-4, .channel-5, .channel-6, .channel-7, .channel-8, .channel-9, .channel-10, .channel-11, .channel-12{
+    background-image: url("../img/channel-icon.png");
+  }
+
+
+html {
+    cursor: url("../img/cursor.png"), auto;
+}
+
+
+* {
+    cursor: url("../img/cursor.png") 0 0, auto !important;
+}
