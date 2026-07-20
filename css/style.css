@@ -10,7 +10,7 @@
   align-items: center;
 }
 .boton div button {
-  width: 100%;
+  width: 98%;
   height: 150px;
   border: transparent;
   transform: scale(1.1);
@@ -47,6 +47,7 @@ header {
 }
 
 html body {
+  overflow-x: hidden;
   background-color: rgb(222, 222, 222);
 }
 
@@ -111,6 +112,32 @@ body {
   gap: 5px;
   align-items: center;
   padding-top: 45px;
+}
+
+@media (max-width: 768px) {
+  .boton {
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: repeat(6, 150px);
+    padding-left: 0;
+    justify-content: center;
+    column-gap: 5px;
+    row-gap: 5px;
+  }
+  .boton div button {
+    width: 90%;
+    height: 150px;
+    border: transparent;
+    transform: scale(1.2);
+  }
+  .boton-derecha {
+    transform: scale(0.8);
+    background-color: transparent;
+    grid-column: auto;
+    grid-row: auto;
+  }
+  body {
+    overflow-x: hidden;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
