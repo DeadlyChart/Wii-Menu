@@ -37,12 +37,14 @@ header{
     grid-column: 5;
     grid-row: 1 / 4;
     text-align: right;
+    z-index: -1;
+    
     button{
-        transform: scale(1);
+        
         padding-top: 0px;
         position: absolute;
-        right: -95%;
-        top:210px;
+        right: -90%;
+        top:205px;
         
         background-color: rgb(222,222,222);
         border: none;
@@ -51,7 +53,7 @@ header{
         align-items: center;
         background-image: url("../img/next-default.png");
         background-repeat: no-repeat;
-        transition: 0.3s;
+        background-size: 2%;
         background-position: 40px 50px;
         
         img{
@@ -82,10 +84,15 @@ html{
      background-position: center;
      background-repeat: no-repeat;
      transition: 0.4s;
+     img{
+        width: 35%;
+        height: 60%;
+     }
 
      &:hover{
         background-image: url("../img/channel-border-selection.png");
     background-size: 94%;
+    
      }
  
   }
@@ -93,27 +100,39 @@ html{
   .menu{
     background-color: transparent;
     border: none;
+    img{
+        display: block;
+    }
+   
+    
     
     
 
   }
   .mail{
-    background-color: transparent;
+    background-color:transparent;
     border: none;
+    
+    
     
   }
   main{
-    
-    align-items: center;
     display: flex;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: -10px;
+     
+     justify-content: center;
+     gap: 70%;
+     padding-left: 3%;
+     padding-right: 3%;
+     padding-top: 5%;
+     padding-bottom: 10px;
+     
     button{
-        transform: scale(0.5);
+        transform: scale(60%);
+
+
     }
   }
+  
  
   .channel-2, .channel-3, .channel-4, .channel-5, .channel-6, .channel-7, .channel-8, .channel-9, .channel-10, .channel-11, .channel-12{
     background-image: url("../img/channel-icon.png");
@@ -122,6 +141,31 @@ html{
      background-repeat: no-repeat;
      background-color: transparent;
   }
+  .static{
+    object-fit: contain;
+    width: 91%;
+    height: 97%;
+    background-color: transparent;
+    opacity: 50%;
+    animation: shift 0.5s linear infinite both;
+  }
+  @keyframes shift{
+    0%{
+        transform: translateY(-5%) ;
+    }
+    
+    
+    
+    100%{
+        transform:  translateY(6%);
+        
+        
+    }
+
+
+
+  }
+
 
 
 html {
@@ -135,12 +179,7 @@ body {
 * {
     cursor: inherit;
 }
-.links{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    padding-top: 45px;
-}
+// celular
 
 @media (max-width: 768px) {
 
@@ -178,4 +217,73 @@ body{
 }
     
 
+}
+
+// imagenes del fondo
+.imagen-fondo{
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    z-index: -1;
+    width: 80%;
+    height: 28.8%;
+}
+
+.linea-derecha{
+    background-image: url("../img/bottom-bg.png");
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-right: 0;
+    background-repeat: repeat-x;
+    width: 10%;    
+    height: 28.8%;
+    z-index: -1;
+}
+.linea-izquierda{
+    background-image: url("../img/bottom-bg.png");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 0;
+    background-repeat: repeat-x;
+    width: 10%;    
+    height: 28.8%;
+    z-index: -1;
+}
+.imagen-fondo2{
+    right: -1;
+    width: 10%;    
+    height: 28.8%;
+    z-index: -1;
+    position: absolute;
+    bottom: 0  ;
+    padding-left: 90%;
+}
+
+.rotar{
+    animation: girar 8s infinite;
+}
+@keyframes girar {
+   
+    
+     /* Espera */
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    /* Da una vuelta de 180° */
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    /* Espera */
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+@keyframes mover {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(20px); }
+    100% { transform: translateX(0); }
 }
