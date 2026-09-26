@@ -1,20 +1,27 @@
 @charset "UTF-8";
+#web {
+  transition: 0.4s;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .boton {
-  gap: 0px;
   display: grid;
-  grid-template-columns: repeat(5, 21%);
-  grid-template-rows: 3fr;
-  padding-top: 28px;
-  padding-left: 12%;
-  column-gap: 1%;
-  row-gap: 5%;
+  grid-template-columns: repeat(5, 23%);
+  grid-template-rows: 3, 30%;
+  row-gap: 2.5vh;
+  padding-top: 4vw;
+  padding-left: 13%;
   align-items: center;
 }
 .boton div button {
-  width: 98%;
-  height: 150px;
+  width: 18vw;
+  height: 10vw;
+  transform: scale(115%);
   border: transparent;
-  transform: scale(1.1);
 }
 
 header {
@@ -25,22 +32,23 @@ header {
   grid-column: 5;
   grid-row: 1/4;
   text-align: right;
-  z-index: -1;
+  z-index: 0;
 }
 .boton-derecha button {
   padding-top: 0px;
   position: absolute;
-  right: -90%;
-  top: 205px;
+  right: -13%;
+  top: 35%;
   background-color: rgb(222, 222, 222);
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url("../img/next-default.png");
+  background-color: transparent;
   background-repeat: no-repeat;
-  background-size: 2%;
-  background-position: 40px 50px;
+  background-size: 11%;
+  background-position: 0px 0px;
 }
 .boton-derecha button img {
   display: block;
@@ -48,7 +56,6 @@ header {
 }
 
 html body {
-  overflow-x: hidden;
   background-color: rgb(222, 222, 222);
 }
 
@@ -56,49 +63,335 @@ html body {
   overflow: hidden;
   background-color: transparent;
   background-image: url("../img/channel-border.png");
-  background-size: 92%;
+  background-size: 16.2vw 9.2vw;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.4s;
 }
 .channel-1 img {
-  width: 35%;
-  height: 60%;
+  width: 38%;
+  height: 65%;
+  padding-bottom: 5px;
+  opacity: 60%;
 }
 .channel-1:hover {
   background-image: url("../img/channel-border-selection.png");
-  background-size: 94%;
+  background-size: 16.23vw 9.3vw;
+}
+
+@keyframes girar {
+  /* Espera */
+  0% {
+    transform: rotateY(0deg);
+  }
+  /* Da una vuelta de 180° */
+  50% {
+    transform: rotateY(360deg);
+  }
+  /* Espera */
+  100% {
+    transform: rotateY(720deg);
+  }
+}
+.channel-2 {
+  overflow: hidden;
+  background-color: transparent;
+  background-image: url(../img/channel-border.png);
+  background-size: 16.3vw 9.2vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+.channel-2 div {
+  pointer-events: none;
+  clip-path: polygon(5% 7%, 60% 5%, 100% 2%, 50% 6%, 95% 8%, 96% 49%, 95% 91.5%, 20% 93%, 30% 90%, 10% 94%, 5% 90%, 3% 50%);
+  width: 17.2vw;
+  height: 10vw;
+  z-index: 1;
+}
+.channel-2 div img {
+  width: 100%;
+  pointer-events: none;
+  animation: miis 10s infinite;
+  background-color: rgb(222, 222, 222);
+}
+
+.channel-2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/channel-border-empty.png");
+  background-size: 16.3vw 9.2vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10;
+  transition: 0.4s;
+}
+
+.channel-2:hover::after {
+  background-image: url("../img/channel-hover.png");
+  background-size: 16.4vw 9.3vw;
+}
+
+#MiiLogo {
+  position: absolute;
+  width: 13%;
+  top: 5vw;
+  left: 36%;
+  animation: MiiLog 10s infinite;
+  pointer-events: none;
+}
+
+@keyframes MiiLog {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes miis {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 30%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.channel-3 {
+  overflow: hidden;
+  background-color: transparent;
+  background-image: url(../img/channel-border-empty.png);
+  background-size: 16.3vw 9.2vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+  pointer-events: all;
+}
+.channel-3 div {
+  pointer-events: none;
+  clip-path: polygon(5% 7%, 60% 5%, 100% 2%, 50% 6%, 95% 8%, 96% 49%, 95% 91.5%, 20% 93%, 30% 90%, 10% 94%, 5% 90%, 3% 50%);
+  width: 17.2vw;
+  height: 10vw;
+  z-index: 1;
+}
+.channel-3 div #shop {
+  width: 160%;
+  pointer-events: none;
+  animation: moverse 12s infinite;
+  position: absolute;
+  background-color: rgb(222, 222, 222);
+}
+
+.channel-3::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/channel-border-empty.png");
+  background-size: 16.3vw 9.2vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10;
+  transition: 0.4s;
+}
+
+.channel-3:hover::after {
+  background-image: url("../img/channel-hover.png");
+  background-size: 16.4vw 9.3vw;
+}
+
+#ShopLogo {
+  position: absolute;
+  width: 7%;
+  top: 5vw;
+  left: 58%;
+  animation: aparecer 12s infinite;
+  pointer-events: none;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes moverse {
+  0% {
+    filter: brightness(3);
+    right: 5%;
+    top: 0%;
+  }
+  15% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(3);
+    top: -70%;
+    right: -60%;
+  }
+}
+#BlackBg1 {
+  pointer-events: none;
+  position: absolute;
+  opacity: 0%;
+  top: -15%;
+  left: -10%;
+  width: 150%;
+  z-index: 10;
+  transition: 0.4s;
+}
+
+#ShopGif {
+  position: absolute;
+  top: 8%;
+  left: 52%;
+  pointer-events: none;
+  opacity: 0%;
+  width: 20%;
+  height: 30%;
+  border-radius: 12%/18%;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+#btn1r {
+  position: absolute;
+  left: 70%;
+  top: 38.5%;
+  z-index: 11;
+  width: 0.8%;
+  opacity: 0%;
+  transition: 0.4s;
+}
+
+#btn1l {
+  position: absolute;
+  left: 65%;
+  top: 38.5%;
+  z-index: 11;
+  width: 0.8%;
+  opacity: 0%;
+  transition: 0.4s;
+}
+
+#btn1m {
+  background-image: url("../img/alt-btn-texture.png");
+  background-repeat: repeat-x;
+  background-size: 4.8%;
+  position: absolute;
+  left: 65.8%;
+  top: 38.5%;
+  z-index: 11;
+  width: 4.2%;
+  height: 4.3%;
+  opacity: 0%;
+  transition: 0.4s;
+}
+
+#play1 {
+  position: absolute;
+  left: 65%;
+  top: 38.5%;
+  z-index: 11;
+  width: 5.6%;
+  height: 4%;
+  opacity: 0%;
+}
+
+#close1 {
+  position: absolute;
+  left: 54%;
+  top: 38.5%;
+  z-index: 11;
+  width: 5.6%;
+  height: 4%;
+  opacity: 0%;
+  transition: 0.4s;
+}
+
+#btn2r {
+  position: absolute;
+  left: 59%;
+  top: 38.5%;
+  z-index: 11;
+  width: 0.8%;
+  opacity: 0%;
+  transition: 0.4s;
+}
+
+#btn2l {
+  position: absolute;
+  left: 54%;
+  top: 38.5%;
+  z-index: 11;
+  width: 0.8%;
+  opacity: 0%;
+  transition: 0.4s;
+}
+
+#btn2m {
+  background-image: url("../img/alt-btn-texture.png");
+  background-repeat: repeat-x;
+  background-size: 4.8%;
+  position: absolute;
+  left: 54.8%;
+  top: 38.5%;
+  z-index: 11;
+  width: 4.2%;
+  height: 4.3%;
+  opacity: 0%;
+  transition: 0.4s;
 }
 
 .menu {
   background-color: transparent;
   border: none;
+  height: 40%;
+  position: absolute;
+  left: 7vh;
+  top: 70%;
+  z-index: 1;
 }
 .menu img {
-  display: block;
+  width: 8vw;
 }
 
 .mail {
   background-color: transparent;
   border: none;
+  height: 40%;
+  position: absolute;
+  right: 7vh;
+  top: 70%;
+  z-index: 1;
+}
+.mail img {
+  width: 8vw;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  gap: 70%;
-  padding-left: 3%;
-  padding-right: 3%;
-  padding-top: 5%;
-  padding-bottom: 10px;
-}
-main button {
-  transform: scale(60%);
-}
-
-.channel-2, .channel-3, .channel-4, .channel-5, .channel-6, .channel-7, .channel-8, .channel-9, .channel-10, .channel-11, .channel-12 {
+.channel-4, .channel-5, .channel-6, .channel-7, .channel-8, .channel-9, .channel-10, .channel-11, .channel-12 {
   background-image: url("../img/channel-icon.png");
-  background-size: 92%;
+  background-size: 16.2vw 9.2vw;
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -109,7 +402,7 @@ main button {
   width: 91%;
   height: 97%;
   background-color: transparent;
-  opacity: 11%;
+  opacity: 10%;
   animation: shift 0.5s linear infinite both;
 }
 
@@ -133,92 +426,79 @@ body {
   cursor: inherit;
 }
 
-@media (max-width: 768px) {
-  .boton {
-    grid-template-columns: repeat(2, 45%);
-    grid-template-rows: repeat(6, 150px);
-    padding-left: 0;
-    justify-content: center;
-    column-gap: 5px;
-    row-gap: 5px;
-  }
-  .boton div button {
-    width: 90%;
-    height: 150px;
-    border: transparent;
-    transform: scale(1.2);
-  }
-  .boton-derecha {
-    transform: scale(0.8);
-    background-color: transparent;
-    grid-column: auto;
-    grid-row: auto;
-  }
-  body {
-    overflow-x: hidden;
-  }
-}
 .imagen-fondo {
   position: absolute;
-  bottom: 0;
+  bottom: -8%;
   left: 10%;
-  z-index: -1;
+  z-index: 0;
   width: 80%;
-  height: 28.8%;
+  height: 29%;
 }
 
 .linea-derecha {
   background-image: url("../img/bottom-bg.png");
   position: absolute;
-  bottom: 0;
+  bottom: -8%;
   left: 0;
   padding-right: 0;
   background-repeat: repeat-x;
   width: 10%;
-  height: 28.8%;
-  z-index: -1;
+  height: 29%;
+  z-index: 0;
+  opacity: 90%;
 }
 
 .linea-izquierda {
   background-image: url("../img/bottom-bg.png");
   position: absolute;
-  bottom: 0;
+  bottom: -8%;
   right: 0;
   padding-right: 0;
   background-repeat: repeat-x;
   width: 10%;
-  height: 28.8%;
-  z-index: -1;
+  height: 29%;
+  z-index: 0;
+  opacity: 90%;
 }
 
 .imagen-fondo2 {
   right: -1;
   width: 10%;
-  height: 28.8%;
-  z-index: -1;
+  height: 29%;
+  z-index: 0;
   position: absolute;
-  bottom: 0;
+  bottom: -8%;
   padding-left: 90%;
+  opacity: 90%;
+}
+
+.main-menu {
+  background-image: url(../img/bg-pattern.png);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  opacity: 100%;
+  z-index: -1;
+}
+
+#patron1 {
+  background-image: url(../img/patron2.png);
+  background-size: 1%;
+  height: 12%;
+  width: 20%;
+  position: absolute;
+  top: 31%;
+  left: 52%;
+  z-index: 10;
+  opacity: 0%;
+  transition: 0.4s;
 }
 
 .rotar {
-  animation: girar 8s infinite;
+  animation: girar 16s infinite;
 }
 
-@keyframes girar {
-  /* Espera */
-  0% {
-    transform: rotateY(0deg);
-  }
-  /* Da una vuelta de 180° */
-  50% {
-    transform: rotateY(180deg);
-  }
-  /* Espera */
-  100% {
-    transform: rotateY(360deg);
-  }
-}
 @keyframes mover {
   0% {
     transform: translateX(0);
@@ -228,6 +508,47 @@ body {
   }
   100% {
     transform: translateX(0);
+  }
+}
+.reflejo {
+  animation: girar 18s infinite;
+}
+
+@media screen and (max-width: 600px) {
+  html body {
+    overflow: hidden;
+  }
+  .boton {
+    grid-template-columns: repeat(3, 21%);
+    grid-template-rows: repeat(5, 1fr);
+    padding-top: 40px;
+    padding-left: 14vw;
+    column-gap: 120px;
+    row-gap: 60px;
+  }
+  .boton div button {
+    width: 22vw;
+    height: 11vw;
+    border: transparent;
+    transform: scale(2.5);
+    background-size: 30w;
+  }
+  .boton-derecha {
+    grid-column: 3;
+    grid-row: 1/6;
+    transform: rotate(90deg);
+  }
+  .boton-derecha button {
+    top: -100px;
+  }
+  .linea-derecha, .linea-izquierda, .imagen-fondo, .imagen-fondo2 {
+    height: 20%;
+  }
+  .menu {
+    left: 3vh;
+  }
+  .mail {
+    right: 3vh;
   }
 }
 
