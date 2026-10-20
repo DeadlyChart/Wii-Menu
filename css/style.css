@@ -1,4 +1,123 @@
 @charset "UTF-8";
+#crearCuenta {
+  z-index: 11;
+  position: absolute;
+  left: 30%;
+  top: 55%;
+  opacity: 0%;
+  transition: 0.5s;
+}
+
+#logearCuenta {
+  z-index: 11;
+  position: absolute;
+  left: 30%;
+  top: 75%;
+  opacity: 0%;
+  transition: 0.5s;
+}
+
+#eject {
+  position: absolute;
+  z-index: 11;
+  top: 25%;
+  left: 30%;
+  opacity: 0%;
+  transition: 0.5;
+}
+
+#ejectbut {
+  position: absolute;
+  z-index: 11;
+  top: 30%;
+  left: 32%;
+  width: 5%;
+  height: 4%;
+  opacity: 0%;
+}
+
+#loginFondo {
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  width: 150%;
+  z-index: 10;
+  opacity: 100%;
+  transition: 1s;
+}
+
+#consola {
+  position: absolute;
+  z-index: 11;
+  top: 20%;
+  left: 45%;
+  transition: 0.5s;
+}
+
+#containerdisc {
+  position: absolute;
+  z-index: 11;
+  top: 23.5%;
+  left: 40%;
+  width: 6%;
+  height: 17%;
+  left: 43%;
+  clip-path: polygon(0 0, 92% 0%, 72% 100%, 0 100%);
+}
+#containerdisc #discoLog {
+  position: absolute;
+  z-index: 11;
+  width: 100%;
+  left: -10%;
+  transition: 0.5s;
+}
+
+#Login {
+  width: 25%;
+  height: 10%;
+  left: 38%;
+  top: 52%;
+  position: absolute;
+  pointer-events: none;
+  transition: 0.5s;
+  z-index: 11;
+}
+
+#Signin {
+  width: 25%;
+  height: 10%;
+  left: 38%;
+  top: 70%;
+  position: absolute;
+  pointer-events: none;
+  transition: 0.5s;
+  z-index: 11;
+}
+
+#Login-But {
+  width: 25%;
+  height: 10%;
+  left: 38%;
+  top: 52%;
+  position: absolute;
+  background: none;
+  border: none;
+  transition: 0.5s;
+  z-index: 12;
+}
+
+#SignIn-But {
+  width: 25%;
+  height: 10%;
+  left: 38%;
+  top: 70%;
+  position: absolute;
+  background: none;
+  border: none;
+  transition: 0.5s;
+  z-index: 12;
+}
+
 #web {
   transition: 0.4s;
 }
@@ -485,14 +604,15 @@ body {
 #patron1 {
   background-image: url(../img/patron2.png);
   background-size: 1%;
-  height: 12%;
+  height: 15%;
   width: 20%;
   position: absolute;
-  top: 31%;
+  top: 29%;
   left: 52%;
   z-index: 10;
   opacity: 0%;
   transition: 0.4s;
+  border-radius: 20%/25%;
 }
 
 .rotar {

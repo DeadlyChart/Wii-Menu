@@ -3,21 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitacora</title>
+    <link rel="stylesheet" href="../css/shop.css">
+    <title>Shop</title>
 </head>
-<body class="body-como">
-    <header>
-        <h1>
-            ¿Como hice esta web?
-        </h1>
-        <p>
-            La idea surgio de querer hacer una web basada en wii, asi que empece a dibujar, trace mas o menos la idea y busque en pinterest distintas ideas para que sea responsive asi como para que se vea exactamente como yo la queria, la verdad que ahora mismo muy seguramente la web se vea en un estado deplorable o haya podido terminarla para ser vista, sin embargo empezo asi despues de unos dias de intento bruzco y codigo desordenado
-        </p>
+<body>
 
-        <p>
-            Ahora voy seguir actualizando esta web estilo bitacora mientras el desarrollo sigue de forma que se pueda ver como avanza poco a poco, esto fue escrito el dia en el que termine el "boceto"
-        </p>
-    </header>
+    <!-- en el loading -->
+        <img id="LOADING" src="../img/loading.png" alt="">
+        <img id="LOGO" src="../img/WII-LOGO-SHOP.png" alt="">
+<!-- despues del loading -->
+<div id="iniciotienda">
+    <img id="izquierda1" src="../img/Virtual.png" alt="">
+        <img id="derecha1" src="../img/Channels.png" alt="">
+        <img id="medio1" src="../img/WiiWare.png" alt="">
+        <img id="wiipoints" src="../img/Wiipoint_banner_a.gif" alt="">
+        <img id="bchicom" src="../img/botoneschicos.png" alt="">
+        <img id="bchicor" src="../img/botoneschicos.png" alt="">
+        <img id="bchicol" src="../img/botoneschicos.png" alt="">
+        <img id="wii-go-back" src="../img/wii-menu-shop.gif" alt="">
+        <button id="buttonvolver" >Wii Menu</button>
+        <button id="buttonvirtual" ></button></div>
+        <img id="backVirtual" src="../img/top_a.gif" alt="">
+        <button id="backVirtualBut"></button>
+</div>
     
+        <!-- dentro del virtual -->
+         
+        
+        
+
+        <div id="virtualPage"><img id="popular" src="../img/Wiipoint_banner_a.gif" alt="">
+        <img id="newest" src="../img/Wiipoint_banner_a.gif" alt="">
+        <img id="category" src="../img/Wiipoint_banner_a.gif" alt="">
+        <img id="title" src="../img/Wiipoint_banner_a.gif" alt="">
+        <img id="back" src="../img/Wiipoint_banner_a.gif" alt="">
+        <button id="popularVirt">Popular Titles</button>
+        </div>
+        
+        <!-- popular virtual console -->
+         <!-- contenedores donde la info del json actua (quien era Jason?), en algun lugar va a quedar cierta info en otra otra -->
+         <div id="contenedorPopVirt">
+
+            
+
+         </div>
+         <div id="pestañaCompra">
+            <img id="compraimg" src="" alt="">
+            <div id="buyA"><button id="buyAbut"></button></div>
+            <h2 id="Nombre-juego"></h2>
+            <h2 id="empresa"></h2>
+            <p id="fecha"></p>
+            <p id="genero"></p>
+            <p id="players"></p>
+            <p id="precio"></p>
+
+         </div>
+         <p id="carroTxt">Carro</p>
+         <button id="carroBut"></button>
+         <div id="contenedorCarro">
+            <div id="carro">
+
+            </div>
+            <div id="resumenCarrito">
+                <p>Total: <span id="totalCarrito">0 Wii Points</span></p>
+
+                <button id="vaciarCarrito">Vaciar carrito</button>
+                <button id="confirmarCompra">Confirmar compra</button>
+                <p id="mensajeCompra"></p>
+            </div>
+
+        
+         
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index2.js"></script>
 </body>
 </html>

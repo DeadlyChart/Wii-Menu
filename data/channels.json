@@ -1,0 +1,52 @@
+{
+    "channelsVirtual":[
+        {
+            "id": 1,
+            "canal": "FIVE NIGHTS AT FREDDYS",
+            "empresa": "Scott Cawthon",
+            "precio": 1000 ,
+            "categoria": "Terror",
+            "img": "../img/Five-Nights-at-Freddys-Symbol.png",
+            "release": "Released 14/10/2026",
+            "consola": "NINTENDO 64",
+            "players": "For 1 player"
+
+        },
+        {
+            "id": 2,
+            "canal": "TLOZ OCARINA OF TIME",
+            "empresa": "Nintendo",
+            "precio": 1000,
+            "categoria": "Aventura",
+            "img": "../img/ocarina-of-time-gold-logo-hd-by-saltso.jpg",
+            "release": "Released 14/10/2026",
+            "consola": "NINTENDO 64",
+            "players": "For 1 player"
+
+        },
+        {
+            "id": 3,
+            "canal": "TLOZ MAJORAS MASK",
+            "empresa": "Nintendo",
+            "precio": 1000,
+            "categoria": "Aventura",
+            "img": "../img/descargar.jpg",
+            "release": "Released 14/10/2026",
+            "consola": "NINTENDO 64",
+            "players": "For 1 player"
+
+        },
+        {
+            "id": 4,
+            "canal": "POKEMON ROJO FUEGO",
+            "empresa": "Nintendo",
+            "precio": 1000,
+            "categoria": "Aventura, RPG",
+            "img": "../img/16x9_NSwitch_PokemonFireRed_ES_image1600w.jpg",
+            "release": "Released 14/10/2026",
+            "consola": "NINTENDO 64",
+            "players": "For 1 player"
+
+        }
+    ]
+}
