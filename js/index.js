@@ -72,7 +72,7 @@ play1.addEventListener("click", () =>{
     btn2r.style.opacity ="0%"
     btn2m.style.opacity ="0%"
     setTimeout(() => {
-        window.location.href = "file:///C:/Users/lucac/Documents/PROYECTO%20FINAL%20PROGRAMACION/pages/shop.html";
+        window.location.href = "pages/shop.html";
     }, 1000);
 });
 
